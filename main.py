@@ -251,10 +251,10 @@ if __name__=="__main__":
     import argparse
     # argparse方便于命令行下输入参数，可以根据需要增加更多
     parser = argparse.ArgumentParser()
-    # parser.add_argument("-t", "--do_train", default=False, type=bool, help="whether to train")
-    # parser.add_argument("-p", "--do_predict", default=True, type=bool, help="whether to train")
-    # parser.add_argument("-b", "--batch_size", default=64, type=int, help="batch size")
-    # parser.add_argument("-e", "--epoch", default=20, type=int, help="epochs num")
+    parser.add_argument("-t", "--do_train", default=True, type=bool, help="whether to train")
+    parser.add_argument("-p", "--do_predict", default=True, type=bool, help="whether to predict")
+    parser.add_argument("-b", "--batch_size", default=64, type=int, help="batch size")
+    parser.add_argument("-e", "--epoch", default=20, type=int, help="epochs num")
     args = parser.parse_args()
 
     con = Config()
